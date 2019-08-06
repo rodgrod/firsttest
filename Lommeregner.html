@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script>
+
+    function PlusSammen() {
+      var x = parseInt(document.getElementById('txt1').value);
+      var y = parseInt(document.getElementById('txt2').value);
+
+      // int
+      var result = x + y;
+      document.getElementById('result').value = result;
+
+    }
+
+    function MinusSammen() {
+      var x = parseInt(document.getElementById('txt1').value);
+      var y = parseInt(document.getElementById('txt2').value);
+
+      // int
+      var result = x - y;
+      document.getElementById('result').value = result;
+
+    }
+
+    function GangeSammen() {
+      var x = parseInt(document.getElementById('txt1').value);
+      var y = parseInt(document.getElementById('txt2').value);
+
+      // int
+      var result = x * y;
+      document.getElementById('result').value = result;
+
+    }
+
+    function DividerSammen() {
+      var x = parseInt(document.getElementById('txt1').value);
+      var y = parseInt(document.getElementById('txt2').value);
+
+      // int
+      var result = x / y;
+      document.getElementById('result').value = result;
+
+    }
+
+
+    function randomNumber() {
+      // int
+      var firstNumber = Math.floor(Math.random() * 3 +1);
+      var result = "ved ikke";
+      if (firstNumber < 2) {
+        var result = "Sten";
+      }
+      if (firstNumber == 2) {
+        var result = "Saks";
+      }
+      if (firstNumber > 2) {
+        var result = "Papir";
+      }
+        document.getElementById('result').value = firstNumber;
+        document.getElementById('tilf').value = result;
+
+    }
+
+  </script>
+
+</head>
+<body>
+
+<input type="text" id="txt1" />
+<button onclick="PlusSammen()"> + </button>
+<button onclick="MinusSammen()"> - </button>
+<button onclick="GangeSammen()"> * </button>
+<button onclick="DividerSammen()"> / </button>
+<input type="text" id="txt2" />
+</br>
+</br>
+<button onclick="randomNumber()"> Sten, Saks, Papir </button>
+
+
+
+<p> Resultatet er: </p>
+
+<input type="text" id="result" />
+
+<input type="text" id="tilf" />
+
+</body>
+</html>
